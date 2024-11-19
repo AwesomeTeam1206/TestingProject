@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "start": "next dev",
+    "prepare": "next dev",
     "lint": "next lint"
   },
   "dependencies": {

@@ -12,7 +12,7 @@ import {
   AuthorNFTCardBox,
 } from "../authorPage/componentIndex";
 
-//IMPORT SMART CONTRACT 
+//IMPORT SMART CONTRACT
 import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
 
 const author = () => {
@@ -56,7 +56,9 @@ const author = () => {
   const [following, setFollowing] = useState(false);
 
   //IMPORT SMART CONTRACT DATA
-  const { fetchMyNFTsOrListedNFTs, currentAccount} = useContext(NFTMarketplaceContext);
+  const { fetchMyNFTsOrListedNFTs, currentAccount } = useContext(
+    NFTMarketplaceContext
+  );
 
   const [nfts, setNfts] = useState([]);
   const [myNFTs, setMyNFTs] = useState([]);
@@ -67,7 +69,7 @@ const author = () => {
     });
   }, []);
 
-  useEffect(()=> {
+  useEffect(() => {
     fetchMyNFTsOrListedNFTs("fetchMyNFTS").then((items) => {
       setMyNFTs(items);
     });

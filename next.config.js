@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-const status = require("./Context/status")
+const status = require("./Context/status");
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
@@ -7,6 +7,6 @@ const nextConfig = {
   images: {
     domains: ["dalaut-nft-marketplace.infura-ipfs.io", "infura-ipfs.io"],
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

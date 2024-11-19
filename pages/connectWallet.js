@@ -10,7 +10,7 @@ import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
 
 const connectWallet = () => {
   const [activeBtn, setActiveBtn] = useState(1);
-  const { currentAccount, connectWallet} = useContext(NFTMarketplaceContext);
+  const { currentAccount, connectWallet } = useContext(NFTMarketplaceContext);
   const providerArray = [
     {
       provider: images.provider1,

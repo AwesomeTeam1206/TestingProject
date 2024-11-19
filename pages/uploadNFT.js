@@ -8,7 +8,6 @@ import { UploadNFT } from "../UploadNFT/uploadNFTIndex";
 import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
 
 const uploadNFT = () => {
-
   const { uploadToIPFS, createNFT } = useContext(NFTMarketplaceContext);
   return (
     <div className={Style.uploadNFT}>
@@ -30,10 +29,7 @@ const uploadNFT = () => {
         </div>
 
         <div className={Style.uploadNFT_box_form}>
-          <UploadNFT 
-          uploadToIPFS={uploadToIPFS}
-          createNFT={createNFT}
-          />
+          <UploadNFT uploadToIPFS={uploadToIPFS} createNFT={createNFT} />
         </div>
       </div>
     </div>

@@ -115,5 +115,5 @@ export default {
   zgcmq,
   loader,
   google,
-  error
+  error,
 };

@@ -39,5 +39,5 @@ export {
   Brand,
   Video,
   Loader,
-  Error
+  Error,
 };
